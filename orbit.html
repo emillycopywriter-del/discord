@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WorkCall · Seu espaço de conexão</title><style>:root{font-family:'DM Sans',sans-serif;color:#dddde6;background:#15151d;font-synthesis:none;color-scheme:dark}*{box-sizing:border-box}body{margin:0;height:100dvh;display:flex;overflow:hidden}button,input,select{font:inherit}button{cursor:pointer;color:inherit;border:0;background:none}button:hover{filter:brightness(1.2);background-color:#ffffff0a}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #aa92ff;outline-offset:3px}button:disabled{opacity:.4;cursor:not-allowed}input{color:#eee;background:none;border:0;outline:none;min-width:0}input::placeholder{color:#777580}.rail{width:76px;background:#101017;display:flex;align-items:center;flex-direction:column;padding:28px 0;gap:19px;flex-shrink:0}.brand{color:#b09aff;font-size:39px;text-decoration:none;line-height:1}.rail-line{height:1px;width:30px;background:#2e2b3a;margin:5px}.server{width:46px;height:46px;border-radius:16px;font-weight:700;background:#252131;position:relative}.server.active{background:#9d83ed;color:#17121f;font-size:20px}.server.active:before{content:'';height:30px;width:3px;position:absolute;left:-15px;top:8px;border-radius:3px;background:#b39aff}.online-dot{width:12px;height:12px;background:#83d4b0;border:3px solid #101017;border-radius:50%;position:absolute;bottom:-1px;right:-1px}.add{color:#ac97e5;font-size:28px;background:#1c1927}.rail-bottom{margin-top:auto;color:#76668e;font-size:25px}aside{width:264px;background:#1b1a24;display:flex;flex-direction:column;border-right:1px solid #292733;flex-shrink:0}.workspace{height:89px;padding:23px 24px;border-bottom:1px solid #2a2833;font:800 23px Manrope,sans-serif;letter-spacing:-1px}.workspace span{display:block;font:400 10px 'DM Sans',sans-serif;color:#86808f;letter-spacing:1.3px;margin-top:5px}.side-body{padding:23px 15px;overflow:auto;flex:1}.search{display:flex;align-items:center;gap:8px;background:#14141c;border:1px solid #2b2937;padding:10px;border-radius:7px;color:#847c94}.search input{font-size:11px;width:100%}.search kbd{font-size:9px;white-space:nowrap;color:#716a80}.home{display:flex;align-items:center;gap:10px;width:100%;padding:19px 10px;color:#a49bad;font-size:13px}.home>span:first-child{flex:1;text-align:left}.badge{font-size:8px;border:1px solid #584675;color:#bca5ee;padding:3px 4px;border-radius:4px}.section-title{font-size:10px;font-weight:700;letter-spacing:1.3px;color:#817a8d;display:flex;align-items:center;justify-content:space-between;margin:24px 10px 10px}.section-title button{font-size:21px;color:#8c8499;padding:0 3px}.channel{display:flex;align-items:center;gap:11px;width:100%;padding:11px 13px;margin-bottom:4px;border-radius:6px;color:#918a9f;text-align:left;font-size:13px}.channel.selected{background:#9d80e51a;color:#c4aaff}.channel .symbol{font-size:21px;color:#777082;line-height:1}.channel.selected .symbol{color:#bb9bf8}.dm-title{margin-top:29px}.avatar{height:34px;width:34px;display:grid;place-items:center;flex-shrink:0;border-radius:12px;background:#42344f;color:#d6b8f4;font-weight:700;font-size:12px;position:relative}.avatar:after{content:'';position:absolute;right:-2px;bottom:-1px;width:8px;height:8px;border-radius:50%;background:#7cc9a8;border:2px solid #1b1a24}.channel .avatar{width:28px;height:28px;border-radius:10px;font-size:10px}.invite{background:linear-gradient(145deg,#2c253e,#211e2d);border:1px solid #3d324f;border-radius:10px;padding:17px;margin:50px 3px 12px}.invite-art{text-align:center;color:#8f74bf;font-size:25px;letter-spacing:13px;padding:4px 0 16px}.invite-art span{font-size:38px;color:#b99bea}.invite strong{font-size:11px}.invite p{color:#9589a8;font-size:11px;line-height:1.7}.invite button{background:#ad91ec;color:#221a32;border-radius:6px;width:100%;padding:9px;font-size:11px;font-weight:700}.profile{padding:17px;display:flex;gap:10px;align-items:center;background:#17161f;border-top:1px solid #2c2834}.profile strong{font-size:12px}.profile small{display:block;font-size:10px;color:#8c8596;margin-top:4px}.profile small i{display:inline-block;width:5px;height:5px;background:#7dccaa;border-radius:50%;margin-right:3px}.profile button{margin-left:auto;color:#96909f;font-size:20px}main{flex:1;min-width:0;display:flex;flex-direction:column;background:radial-gradient(ellipse at 55% 40%,#1e1b2a44,transparent 65%),#191820}.channel-header{height:89px;min-height:89px;border-bottom:1px solid #2b2834;display:flex;align-items:center;justify-content:space-between;padding:0 30px;gap:15px}.channel-heading{display:flex;align-items:center;gap:14px;min-width:0}.hash{color:#a294b7;font-size:26px}.channel-heading strong{font-size:15px}.divider{height:20px;width:1px;background:#37313f}.channel-heading>span:last-child{font-size:11px;color:#797281}.header-actions{display:flex;gap:12px}.header-actions button{font-size:19px;color:#a49bad}.header-actions button:first-child{border:1px solid #494055;border-radius:6px;padding:9px 12px;color:#c5b7de;white-space:nowrap}.header-actions button span{font-size:11px;margin-left:5px}#connection{padding:6px 30px;background:#9b7eda0b;color:#a795c4;font-size:10px;letter-spacing:.3px}.chat{overflow:auto;flex:1;padding:25px 40px}.welcome{padding:50px 0 32px;max-width:590px}.welcome-icon{height:65px;width:65px;background:linear-gradient(145deg,#554070,#30263f);border:1px solid #6e538b;border-radius:21px;display:grid;place-items:center;color:#d0b3fa;font-size:38px;transform:rotate(-7deg);margin-bottom:30px;box-shadow:0 10px 50px #8c58c511}.eyebrow{font-size:9px;letter-spacing:2.5px;color:#ac91d7;font-weight:700;margin-bottom:15px}h1{font:800 clamp(27px,3vw,43px)/1.25 Manrope,sans-serif;letter-spacing:-1.6px;margin:0 0 17px;color:#f0ebf7}h1 span{color:#ac87eb}.welcome p{color:#92899e;font-size:12px;line-height:1.9}.welcome p strong{font-weight:500;color:#b6a2d1}.welcome-tags{display:flex;gap:20px;margin-top:24px;font-size:10px;color:#80758f}.welcome-tags span:first-child{color:#b29acb}.date-line{display:flex;align-items:center;gap:16px;color:#696270;font-size:9px;margin:17px 0 26px}.date-line:before,.date-line:after{content:'';height:1px;background:#2e2836;flex:1}.message{display:flex;gap:13px;padding:11px 0}.message-body{min-width:0}.message strong{font-size:12px;color:#d4c5e5}.message time{font-size:9px;color:#69616f;margin-left:10px}.message p{font-size:13px;line-height:1.65;color:#b1a8bb;margin:5px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}.empty-message{font-size:12px;color:#786f83;padding:6px 0}.composer-wrap{padding:15px 30px 20px}#composer{display:flex;align-items:center;padding:10px 12px;background:#24212e;border:1px solid #393042;border-radius:9px;gap:12px}#composer>button:first-child{font-size:25px;color:#8d7d9d}#message{flex:1;font-size:12px;padding:5px 0}.send{background:#a488df;color:#20182f;border-radius:6px;width:32px;height:32px}.composer-hint{display:flex;justify-content:space-between;font-size:8px;color:#675d74;margin:9px 5px 0}.composer-hint strong{color:#91809f;font-weight:400}.members{width:229px;background:#18171f;border-left:1px solid #2a2631;display:flex;flex-direction:column;flex-shrink:0}.members>header{height:89px;border-bottom:1px solid #2b2834;padding:37px 23px;font-size:10px;letter-spacing:1.5px;color:#99909f}.members>header span{background:#2c2736;border-radius:4px;margin-left:10px;padding:2px 6px;font-size:9px;color:#b0a0c4}.members-label{font-size:9px;letter-spacing:1.2px;color:#776c84;padding:28px 22px 13px}#users{padding:0 12px}.user{display:flex;align-items:center;gap:11px;width:100%;text-align:left;padding:10px;border-radius:7px}.user strong{font-size:11px;font-weight:500}.user small{display:block;color:#776e82;font-size:9px;margin-top:4px}.community-note{margin:auto 24px 30px;border-top:1px solid #302837;padding-top:28px}.community-note>span{font-size:30px;color:#a086c5}.community-note h3{font-size:12px;font-weight:500;color:#a89ab9}.community-note p{font-size:10px;line-height:1.9;color:#756980}.members>footer{padding:18px 22px;border-top:1px solid #2b2532;color:#8f79ad;letter-spacing:2px;font-size:10px}.members>footer span{font-size:6px;letter-spacing:1px;margin-left:8px;color:#61556f}dialog{background:#24202e;border:1px solid #554366;color:#eee5f8;border-radius:18px;padding:32px;width:min(440px,90vw);box-shadow:0 25px 120px #0008}dialog::backdrop{background:#0a0812cc;backdrop-filter:blur(7px)}dialog h2{font:700 24px Manrope,sans-serif;letter-spacing:-.7px}dialog p{font-size:13px;color:#ac9cba;line-height:1.7}dialog label{display:block;font-size:12px;margin:25px 0 20px;color:#b7a5c7}dialog input,dialog select{display:block;width:100%;padding:13px;margin-top:9px;border-radius:7px;background:#17131f;border:1px solid #4d3a5e;color:#eee}.primary{background:#ad8ce8;color:#21162e;padding:12px 18px;border-radius:7px;font-weight:700}#identity .primary{width:100%}dialog small{display:block;color:#81718d;font-size:10px;margin-top:18px}.modal-logo{font-size:40px;color:#b695f0}.modal-actions{display:flex;justify-content:flex-end;gap:12px}#toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#49365d;border:1px solid #aa85cd;border-radius:8px;padding:15px 24px;max-width:90vw;z-index:10;font-size:13px}#call-panel{padding:18px 25px;background:#121018;border-bottom:1px solid #40314c;max-height:55vh;overflow:auto}.call-title{display:flex;gap:14px;align-items:center;font-size:12px;margin-bottom:14px}.call-title>span{font-size:8px;letter-spacing:1px;color:#84dbb1}.call-title small{color:#9e8cab}#videos{display:flex;gap:10px;overflow:auto}.video-tile{position:relative;min-width:200px;flex:1;border-radius:10px;background:#292033;overflow:hidden;height:180px}.video-tile video{width:100%;height:100%;object-fit:contain}.video-tile span{position:absolute;bottom:8px;left:10px;background:#17101acc;border-radius:4px;padding:4px 8px;font-size:10px}.call-controls{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:14px}.call-controls button{background:#30253d;padding:9px;border-radius:6px;font-size:10px}.call-controls .danger{background:#ab465d;color:white}[hidden]{display:none!important}@media(min-width:1500px){.welcome{padding-top:80px}.chat{padding-left:60px}}@media(max-width:1150px){.members{display:none}.members.show{display:flex}.channel-heading>span:last-child,.divider{display:none}}@media(max-width:760px){.rail{width:52px;padding-top:24px}.brand{font-size:30px}.server{width:34px;height:34px;border-radius:11px}.server.active:before{left:-9px;top:3px}aside{width:175px}.workspace{padding:24px 15px}.workspace span{font-size:8px;letter-spacing:.5px}.side-body{padding:18px 8px}.search kbd,.badge,.invite{display:none}.section-title{font-size:8px;letter-spacing:.5px}.channel{font-size:11px;padding:10px}.channel-header{padding:0 16px}.header-actions button span{display:none}.chat{padding:20px}.welcome{padding-top:30px}.welcome-tags{display:block;line-height:2.5}.welcome-tags span{display:block}.composer-wrap{padding:10px 14px}.composer-hint span:last-child{display:none}.members.show{position:absolute;right:0;top:89px;bottom:0;z-index:3}.profile{padding:12px 8px}.profile button{font-size:15px}h1{font-size:28px}.profile .avatar{width:26px;height:26px}}@media(max-width:480px){aside{width:135px}.workspace{font-size:20px}.workspace span{font-size:7px}.search{padding:7px}.search input{font-size:9px}.home{font-size:11px;padding:17px 4px;gap:5px}.section-title{margin-left:4px;margin-right:4px}.profile strong{font-size:10px}.profile small{font-size:8px}.channel{gap:6px;padding:9px 5px}.channel .avatar{width:23px;height:23px}h1{font-size:23px;letter-spacing:-.8px}.chat{padding:16px}.welcome-icon{height:50px;width:50px;font-size:30px}.eyebrow{font-size:7px;letter-spacing:1px}.welcome p{font-size:11px}.header-actions{gap:2px}.channel-heading{gap:7px}.channel-header{padding:0 10px}.header-actions button:first-child{padding:6px}.channel-heading strong{font-size:12px}.composer-wrap{padding:10px}.composer-hint{font-size:7px}#composer{padding:7px;gap:6px}.send{width:25px;height:28px}#message{font-size:10px}.welcome-tags{font-size:8px}.profile button{padding:0}.profile{gap:6px}}
+.sidebar-toggle{display:none;font-size:21px;color:#bda9dc;padding:4px}.header-actions button:first-child{display:flex;align-items:center;justify-content:center;gap:5px}.preview-banner{line-height:1.5}input{font-size:16px}@media(max-width:600px){.sidebar-toggle{display:block}.channel-header{justify-content:flex-start;gap:9px}.channel-heading{flex:1}.header-actions{flex-shrink:0}aside{display:none}body.sidebar-open aside{display:flex;position:fixed;z-index:5;left:52px;top:0;bottom:0;width:240px;box-shadow:20px 0 60px #0009}.workspace{font-size:23px;padding:24px}.workspace span{font-size:10px}.side-body{padding:20px 12px}.section-title{font-size:10px;letter-spacing:1px}.channel{font-size:13px;padding:12px}.search input{font-size:12px}.channel .avatar{width:28px;height:28px}.profile{padding:17px}.profile strong{font-size:12px}.profile small{font-size:10px}.profile .avatar{width:34px;height:34px}.chat{padding:24px}.welcome{padding-top:28px}.welcome-icon{width:57px;height:57px;font-size:33px}h1{font-size:30px;letter-spacing:-1px}.eyebrow{font-size:8px;letter-spacing:1.7px}.welcome p{font-size:12px}.welcome-tags{font-size:9px}.composer-wrap{padding:12px 16px}.composer-hint{font-size:8px}#message{font-size:12px}#composer{padding:9px;gap:10px}#connection{padding:7px 20px;font-size:9px}.welcome-tags span{display:inline}.welcome-tags{display:flex;gap:12px;flex-wrap:wrap;line-height:1.8}.call-controls button{font-size:11px}.members.show{right:0;left:52px;width:auto}.video-tile{min-width:200px}.composer-hint span:last-child{display:none}}
+
+/* WorkCall meetings */
+.workspace{letter-spacing:-.7px;font-size:25px}.workspace span{font-size:9px}.meeting-shortcuts{display:grid;gap:8px;margin:5px 0 20px}.meeting-shortcuts button{padding:11px 10px;border-radius:7px;font-size:12px;text-align:left;border:1px solid #4b3d61;color:#cbb7e7}.meeting-shortcuts button:first-child{background:#a084dd;color:#21172e;font-weight:700}.welcome-meetings{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0}.welcome-meetings button{font-size:12px}.welcome-meetings>button:last-child{border:1px solid #554263;padding:11px;border-radius:7px}.welcome{padding-top:25px}.invite{margin-top:25px}.check-label{display:flex;align-items:center;gap:10px!important;margin:18px 0!important}.check-label input{display:inline;width:18px;height:18px;margin:0;accent-color:#ad8ce8}.sharing-status{font-size:11px;color:#bca3d5;margin-bottom:12px;line-height:1.6}#prejoin-error{color:#ffb1bf;font-size:12px;line-height:1.7;margin-bottom:18px}#videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));overflow:visible}.video-tile{width:100%;min-width:0;height:170px}.video-tile .video-avatar{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:60px;height:60px;font-size:19px;border-radius:22px;display:none}.video-tile .video-avatar:after{display:none}.video-tile.camera-off .video-avatar{display:grid}.video-tile.camera-off video{opacity:0}.video-tile video{object-fit:cover}.video-tile span{z-index:1}#presentation{position:relative;margin-bottom:14px;background:#09070e;border:1px solid #71538e;border-radius:10px;overflow:hidden}#presentation-video{display:block;width:100%;height:290px;object-fit:contain}#presentation-name{position:absolute;bottom:10px;left:12px;font-size:11px;padding:5px 9px;background:#21172fcc;border-radius:5px}#call-panel{max-height:70vh;flex-shrink:0}body.in-call .chat .welcome,body.in-call .date-line{display:none}body.in-call .chat{padding-top:8px;min-height:65px}body.in-call #videos{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}#copy-invite{font-size:11px;border:1px solid #534064;border-radius:6px;padding:9px}.call-controls button[aria-pressed="true"]{background:#514065}.call-controls button:disabled{opacity:.5}.call-controls .danger{background:#b64462}#invite-link,#invite-code{font-family:monospace}#invite-code{letter-spacing:3px}.in-call .call-title{flex-wrap:wrap}.community-note>span{font-family:sans-serif;color:#a086c5}@media(max-width:600px){.welcome-meetings{display:grid;gap:10px}.welcome-meetings button{width:100%;text-align:center}.header-actions{gap:7px}#copy-invite{padding:6px;font-size:9px}.channel-heading strong{max-width:115px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.video-tile{height:150px}#presentation-video{height:200px}.call-controls{gap:6px}#call-panel{padding:14px;max-height:68vh}.call-controls button{font-size:10px}#videos,body.in-call #videos{grid-template-columns:repeat(2,minmax(0,1fr))}.video-tile span{font-size:9px}.workspace{font-size:25px!important}}
+</style></head>
+<body>
+<nav class="rail"><a class="brand" href="/" aria-label="WorkCall">◉</a><div class="rail-line"></div><button class="server active" title="Comunidade WorkCall">W<span class="online-dot"></span></button><button class="server add" id="rail-add" title="Criar grupo">+</button><span class="rail-bottom">✦</span></nav>
+<aside id="sidebar"><header class="workspace">WorkCall <span>reuniões & conversas ⌄</span></header><div class="side-body"><div class="search">⌕ <input id="search" placeholder="Encontrar uma conversa" aria-label="Encontrar conversa"><kbd>⌘ K</kbd></div><button class="home" id="home">✦ <span>Seu espaço</span><span class="badge">NOVO</span></button><div class="meeting-shortcuts"><button id="new-meeting">＋ Nova reunião</button><button id="join-meeting">↗ Entrar com código</button></div><div class="section-title">SUAS REUNIÕES</div><div id="meetings"></div><div class="section-title">CANAIS DE TEXTO <button id="add-group" title="Criar grupo">+</button></div><div id="groups"></div><div class="section-title dm-title">MENSAGENS DIRETAS <button id="add-dm" title="Nova conversa">+</button></div><div id="directs"></div><div class="invite"><div class="invite-art">✧ <span>◎</span> ✦</div><strong>Boas ideias começam juntos.</strong><p>Crie um grupo e aproxime sua equipe.</p><button id="invite">+ Criar um grupo</button></div></div><footer class="profile"><div class="avatar" id="my-avatar">V</div><div><strong id="my-name">Você</strong><small><i></i> Disponível</small></div><button id="rename" title="Alterar nome">⚙</button></footer></aside>
+<main><header class="channel-header"><button id="sidebar-toggle" class="sidebar-toggle" aria-label="Mostrar canais" aria-controls="sidebar" aria-expanded="false">☰</button><div class="channel-heading"><span class="hash">#</span><strong id="room-name">geral</strong><span class="divider"></span><span id="room-description">Onde todas as conversas começam</span></div><div class="header-actions"><button id="call" title="Entrar na chamada"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 1.9Z"/></svg> <span>Iniciar chamada</span></button><button id="copy-invite" hidden title="Copiar convite">Convidar</button><button id="members-toggle" title="Mostrar participantes">♧</button></div></header><div id="connection" role="status">Conectando…</div><section id="call-panel" hidden><div class="call-title"><span>● AO VIVO</span><strong id="call-label">Chamada em grupo</strong><small id="call-count"></small></div><div id="sharing-status" class="sharing-status">Uma pessoa por vez pode apresentar. As câmeras continuam ligadas.</div><div id="presentation" hidden><video id="presentation-video" autoplay playsinline muted></video><span id="presentation-name"></span></div><div id="videos"></div><div class="call-controls"><button id="mic">Microfone ligado</button><button id="camera">Ligar câmera</button><button id="screen">Compartilhar tela</button><button id="hangup" class="danger">Encerrar</button></div></section><section class="chat" id="chat"><div class="welcome"><div class="welcome-icon">#</div><div class="eyebrow">SEU PONTO DE ENCONTRO</div><h1>Sua equipe conectada.<br>Seu trabalho flui<span>.</span></h1><div class="welcome-meetings"><button id="quick-create" class="primary">＋ Criar reunião</button><button id="quick-join">Entrar em uma reunião ↗</button></div><p>Este é o começo do canal <strong id="welcome-room"># geral</strong>.<br>Compartilhe ideias, conecte pessoas e faça acontecer.</p><div class="welcome-tags"><span>✧ Ideias são bem-vindas</span><span>♡ Conexões de verdade</span></div></div><div class="date-line"><span>Hoje, um novo começo</span></div><div id="messages" aria-live="polite"></div></section><div class="composer-wrap"><form id="composer"><button type="button" id="emoji" title="Inserir emoji">⊕</button><input id="message" placeholder="Conversar em #geral" maxlength="4000" autocomplete="off" aria-label="Mensagem"><button type="submit" class="send" title="Enviar mensagem">➤</button></form><div class="composer-hint"><span><strong>Enter</strong> para enviar</span><span>Seu próximo papo favorito está aqui ✧</span></div></div></main>
+<section class="members"><header>MEMBROS <span id="member-count">0</span></header><div class="members-label">ONLINE — <span id="online-count">0</span></div><div id="users"></div><div class="community-note"><span>✳</span><h3>Um espaço para pertencer.</h3><p>Gente interessante.<br>Conversas que conectam.</p></div><footer>WORKCALL <span>FEITO PARA CONECTAR</span></footer></section>
+<dialog id="identity"><form method="dialog" id="identity-form"><div class="modal-logo">◉</div><h2>Bem-vindo ao WorkCall.</h2><p>Como você quer aparecer nas conversas?</p><label>Seu nome<input id="name-input" required maxlength="32" placeholder="Digite seu nome" autocomplete="nickname"></label><button class="primary">Começar →</button><small>Entre com seu nome para conversar e participar de reuniões.</small></form></dialog>
+<dialog id="room-dialog"><form method="dialog" id="room-form"><h2 id="dialog-title">Criar um grupo</h2><label id="group-label">Nome do grupo<input id="group-name" maxlength="48" placeholder="Ex.: ideias e café"></label><label id="person-label" hidden>Pessoa<select id="person"></select></label><p id="room-help">Os grupos ficam disponíveis para todos nesta comunidade.</p><div class="modal-actions"><button value="cancel" type="button" id="cancel-room">Cancelar</button><button class="primary">Criar conversa</button></div></form></dialog>
+<dialog id="meeting-dialog"><form id="meeting-form"><h2 id="meeting-title">Nova reunião</h2><p id="meeting-help">Convide sua equipe por código ou link.</p><label id="meeting-name-label">Nome da reunião<input id="meeting-name" maxlength="60" placeholder="Ex.: Alinhamento da equipe"></label><label id="meeting-code-label" hidden>Código ou link do convite<input id="meeting-code" placeholder="Cole o convite ou digite o código" autocomplete="off"></label><div class="modal-actions"><button type="button" id="cancel-meeting">Cancelar</button><button class="primary" id="meeting-submit">Criar reunião</button></div></form></dialog>
+<dialog id="prejoin-dialog"><form id="prejoin-form"><div class="modal-logo">◉</div><h2 id="prejoin-title">Entrar na chamada</h2><p>Escolha como participar. Você pode mudar durante a reunião.</p><label class="check-label"><input id="prejoin-mic" type="checkbox" checked> Entrar com microfone</label><label class="check-label"><input id="prejoin-camera" type="checkbox" checked> Entrar com câmera</label><div id="prejoin-error" role="alert"></div><div class="modal-actions"><button type="button" id="cancel-prejoin">Cancelar</button><button class="primary" id="join-confirm">Entrar agora</button></div></form></dialog>
+<dialog id="invite-dialog"><h2>Convide sua equipe</h2><p>Compartilhe o convite para entrar nesta reunião.</p><label>Código<input id="invite-code" readonly></label><label>Link<input id="invite-link" readonly></label><div class="modal-actions"><button id="close-invite">Fechar</button><button id="copy-link" class="primary">Copiar link</button></div></dialog><div id="toast" role="status" hidden></div>
+<script>const $=id=>document.getElementById(id);
+const previewMode=true;
+const tabId=sessionStorage.workcallId ||= crypto.randomUUID();
+let id=tabId;
+let name=localStorage.workcallName||'',rooms=[],messages=[],users=[],current='general',source,mode='group',callRoom=null,stream,screenStream;
+const peers=new Map(),pending=new Map();
+const shares=new Map();
+let iceServers=[{urls:'stun:stun.l.google.com:19302'}],connected=false,meetingMode='create',prejoinRoom=null,screenBusy=false;
+function toast(text){$('toast').textContent=text;$('toast').hidden=false;clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').hidden=true,5000);}
+async function api(action,extra={}){
+ if(previewMode){
+  if(action==='create-meeting'){const room={id:crypto.randomUUID(),name:extra.name||'Reunião da equipe',kind:'meeting',members:[id],code:crypto.randomUUID().slice(0,8).toUpperCase()};rooms.push(room);renderRooms();return room;}
+  if(action==='find-meeting'){const room=rooms.find(r=>r.kind==='meeting'&&(r.code===extra.code.toUpperCase()||r.id===extra.code));if(!room)throw new Error('Na prévia, use o código de uma reunião criada aqui.');return {room,messages:[]};}
+  if(action==='message'){
+   const message={id:crypto.randomUUID(),room:current,user:id,name,text:extra.text,time:Date.now()};
+   messages.push(message);renderMessages();return message;
+  }
+  if(action==='room'){
+   const members=[id,...(extra.members||[])];
+   const existing=extra.kind==='dm'&&rooms.find(r=>r.kind==='dm'&&r.members.length===members.length&&members.every(member=>r.members.includes(member)));
+   if(existing)return existing;
+   const room={id:crypto.randomUUID(),name:extra.name,kind:extra.kind,members};rooms.push(room);renderRooms();return room;
+  }
+  throw new Error('Chamadas reais estão disponíveis ao executar o aplicativo com npm start.');
+ }
+ if(!connected)throw new Error('Aguarde a conexão com o WorkCall.');
+ const r=await fetch('/api',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id,action,room:current,...extra})});
+ const result=await r.json();if(!r.ok)throw new Error(result.error||'Não foi possível concluir a ação.');return result;
+}
+function connectPreview(){
+ name=name||'Você';
+ rooms=[{id:'general',name:'geral',kind:'group',members:[]},{id:'design',name:'design',kind:'group',members:[]},{id:'ideas',name:'ideias-e-inspirações',kind:'group',members:[]},{id:'projects',name:'projetos',kind:'group',members:[]},{id:'demo-dm-ana',name:'Ana Costa',kind:'dm',members:[id,'demo-ana']},{id:'demo-dm-lucas',name:'Lucas Silva',kind:'dm',members:[id,'demo-lucas']}];
+ users=[{id,name,call:null},{id:'demo-ana',name:'Ana Costa',call:null},{id:'demo-lucas',name:'Lucas Silva',call:null},{id:'demo-bea',name:'Beatriz Lima',call:null}];
+ messages=[{id:'demo-1',room:'general',user:'demo-ana',name:'Ana Costa',text:'Oi, pessoal! Que bom ter vocês por aqui. Vamos criar algo incrível juntos? ✨',time:Date.now()-600000},{id:'demo-2',room:'general',user:'demo-lucas',name:'Lucas Silva',text:'Já deixei algumas referências no canal de design. Me contem o que acharam! 🎨',time:Date.now()-420000},{id:'demo-3',room:'demo-dm-ana',user:'demo-ana',name:'Ana Costa',text:'Essa é uma conversa individual de exemplo. Você pode experimentar enviar uma mensagem aqui.',time:Date.now()-300000}];
+ $('my-name').textContent=name;$('my-avatar').textContent=name.slice(0,2).toUpperCase();
+ $('connection').textContent='✧ Prévia interativa do design · pessoas e conversas ilustrativas · alterações não são salvas';
+ $('connection').classList.add('preview-banner');
+ selectRoom('general');renderUsers();
+}
+function avatar(label){const a=document.createElement('div');a.className='avatar';a.textContent=label.trim().slice(0,2).toUpperCase();return a;}
+function roomName(r){if(r.kind==='dm'){const other=users.find(u=>r.members.includes(u.id)&&u.id!==id);return other?.name||r.name;}return r.name;}
+function renderRooms(){for(const kind of ['group','dm','meeting']){const el=$(kind==='group'?'groups':kind==='dm'?'directs':'meetings');el.replaceChildren();for(const room of rooms.filter(r=>r.kind===kind&&r.name.toLowerCase().includes($('search').value.toLowerCase()))){const b=document.createElement('button');b.className='channel'+(room.id===current?' selected':'');const symbol=document.createElement('span');symbol.className='symbol';symbol.textContent='#';if(kind==='meeting')symbol.textContent='◉';b.append(kind==='dm'?avatar(roomName(room)):symbol);const label=document.createElement('span');label.textContent=roomName(room);b.append(label);b.onclick=()=>selectRoom(room.id);el.append(b);}}}
+function selectRoom(roomId){document.body.classList.remove('sidebar-open');$('sidebar-toggle').setAttribute('aria-expanded','false');current=roomId;const room=rooms.find(r=>r.id===current);if(!room)return;$('room-name').textContent=roomName(room);$('welcome-room').textContent=(room.kind==='group'?'# ':'')+roomName(room);$('message').placeholder='Conversar em '+(room.kind==='group'?'#':'')+roomName(room);$('room-description').textContent=room.kind==='meeting'?'Reunião · '+room.code:room.kind==='dm'?'Uma conversa só de vocês':'Onde todas as conversas começam';$('copy-invite').hidden=room.kind!=='meeting';renderRooms();renderMessages();}
+function renderMessages(){const container=$('messages');container.replaceChildren();const selected=messages.filter(m=>m.room===current);if(!selected.length){const p=document.createElement('p');p.className='empty-message';p.textContent='O espaço é de vocês. Seja a primeira pessoa a dizer oi 👋';container.append(p);}for(const m of selected){const row=document.createElement('article');row.className='message';row.append(avatar(m.name));const body=document.createElement('div');body.className='message-body';const author=document.createElement('strong');author.textContent=m.name;const time=document.createElement('time');time.textContent=new Date(m.time).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});time.dateTime=new Date(m.time).toISOString();const text=document.createElement('p');text.textContent=m.text;body.append(author,time,text);row.append(body);container.append(row);}$('chat').scrollTop=$('chat').scrollHeight;}
+function renderUsers(){const list=$('users');list.replaceChildren();$('member-count').textContent=users.length;$('online-count').textContent=users.length;for(const u of users){const b=document.createElement('button');b.className='user';b.append(avatar(u.name));const info=document.createElement('div'),label=document.createElement('strong'),status=document.createElement('small');label.textContent=u.name+(u.id===id?' (você)':'');status.textContent=u.call?'Em uma chamada':'Disponível para conversar';info.append(label,status);b.append(info);b.onclick=()=>{if(u.id!==id)createDM(u);};list.append(b);}renderRooms();syncPeers();}
+async function connect(){
+ source?.close();connected=false;
+ try{
+  const response=await fetch('/session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,tab:tabId})});
+  if(!response.ok)throw new Error('Não foi possível entrar. Tente novamente.');
+  id=(await response.json()).id;
+  source=new EventSource('/events?'+new URLSearchParams({tab:tabId,name}));
+  source.addEventListener('ready',async e=>{
+   const data=JSON.parse(e.data);connected=true;rooms=data.rooms;messages=data.messages;users=data.users;iceServers=data.iceServers;
+   selectRoom(rooms.some(r=>r.id===current)?current:'general');renderUsers();
+   $('connection').textContent='● Conectado ao WorkCall · crie uma reunião e compartilhe o convite';
+   const code=new URLSearchParams(location.search).get('meeting');
+   if(code){history.replaceState({},'',location.pathname);await findMeeting(code);}
+  });
+  source.addEventListener('room',e=>{const room=JSON.parse(e.data);if(!rooms.some(r=>r.id===room.id))rooms.push(room);renderRooms();});
+  source.addEventListener('message',e=>{const message=JSON.parse(e.data);if(!messages.some(m=>m.id===message.id))messages.push(message);if(message.room===current)renderMessages();});
+  source.addEventListener('users',e=>{users=JSON.parse(e.data);renderUsers();});
+  source.addEventListener('signal',e=>handleSignal(JSON.parse(e.data)).catch(()=>toast('Falha ao conectar mídia. Tente entrar novamente.')));
+  source.addEventListener('left',e=>removePeer(JSON.parse(e.data).id));
+  source.addEventListener('sharing',e=>{const data=JSON.parse(e.data);shares.set(data.room,data.owner);renderSharing();});
+  source.onerror=()=>{connected=false;$('connection').textContent='Reconectando…';if(callRoom)leaveCall(false);};
+  $('my-name').textContent=name;$('my-avatar').textContent=name.slice(0,2).toUpperCase();
+ }catch(error){toast(error.message);}
+}
+$('identity-form').onsubmit=event=>{name=$('name-input').value.trim();if(!name){event.preventDefault();return;}localStorage.workcallName=name;if(previewMode)connectPreview();else connect();};
+if(previewMode)connectPreview();else if(name)connect();else $('identity').showModal();
+$('rename').onclick=()=>{if(callRoom)leaveCall();$('name-input').value=name;$('identity').showModal();};
+$('composer').onsubmit=async e=>{e.preventDefault();const text=$('message').value.trim();if(!text)return;try{await api('message',{text});$('message').value='';}catch(e){toast(e.message);}};
+$('emoji').onclick=()=>{$('message').value+=' 👋';$('message').focus();};$('search').oninput=renderRooms;
+$('home').onclick=()=>selectRoom('general');$('members-toggle').onclick=()=>document.querySelector('.members').classList.toggle('show');
+function openRoom(kind){mode=kind;$('dialog-title').textContent=kind==='dm'?'Nova mensagem direta':'Criar um grupo';$('group-label').hidden=kind==='dm';$('group-name').required=kind!=='dm';$('person-label').hidden=kind!=='dm';$('room-help').textContent=kind==='dm'?'Escolha uma pessoa conectada para conversar.':'Os grupos ficam disponíveis para todos nesta comunidade.';$('person').replaceChildren();for(const u of users.filter(u=>u.id!==id)){const option=document.createElement('option');option.value=u.id;option.textContent=u.name;$('person').append(option);}if(kind==='dm'&&!$('person').options.length){toast('Abra o WorkCall em outro navegador para encontrar alguém online.');return;}$('room-dialog').showModal();}
+for(const el of ['add-group','rail-add','invite'])$(el).onclick=()=>openRoom('group');$('add-dm').onclick=()=>openRoom('dm');$('cancel-room').onclick=()=>$('room-dialog').close();
+async function createDM(u){try{const r=await api('room',{kind:'dm',name:u.name,members:[u.id]});if(!rooms.some(x=>x.id===r.id))rooms.push(r);selectRoom(r.id);}catch(e){toast(e.message);}}
+$('room-form').onsubmit=async e=>{e.preventDefault();if(mode==='dm'){const u=users.find(u=>u.id===$('person').value);if(u)await createDM(u);}else try{const r=await api('room',{kind:'group',name:$('group-name').value.trim()||'novo-grupo'});if(!rooms.some(x=>x.id===r.id))rooms.push(r);selectRoom(r.id);$('group-name').value='';}catch(e){toast(e.message);return;}$('room-dialog').close();};
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();$('search').focus();}});
+
+function openMeeting(mode){
+ meetingMode=mode;$('meeting-title').textContent=mode==='create'?'Nova reunião':'Entrar em uma reunião';
+ $('meeting-name-label').hidden=mode!=='create';$('meeting-code-label').hidden=mode==='create';
+ $('meeting-name').required=mode==='create';$('meeting-code').required=mode!=='create';
+ $('meeting-submit').textContent=mode==='create'?'Criar reunião':'Continuar';$('meeting-dialog').showModal();
+}
+for(const button of ['new-meeting','quick-create'])$(button).onclick=()=>openMeeting('create');
+for(const button of ['join-meeting','quick-join'])$(button).onclick=()=>openMeeting('join');
+$('cancel-meeting').onclick=()=>$('meeting-dialog').close();
+async function findMeeting(value){
+ try{
+  let code=value.trim();try{code=new URL(code).searchParams.get('meeting')||code;}catch{}
+  const data=await api('find-meeting',{code});
+  if(!rooms.some(r=>r.id===data.room.id))rooms.push(data.room);
+  for(const message of data.messages)if(!messages.some(m=>m.id===message.id))messages.push(message);
+  $('meeting-dialog').close();selectRoom(data.room.id);openPrejoin(data.room.id);
+ }catch(error){toast(error.message);}
+}
+$('meeting-form').onsubmit=async event=>{
+ event.preventDefault();$('meeting-submit').disabled=true;
+ try{
+  if(meetingMode==='join'){await findMeeting($('meeting-code').value);return;}
+  const room=await api('create-meeting',{name:$('meeting-name').value.trim()||'Reunião da equipe'});
+  if(!rooms.some(r=>r.id===room.id))rooms.push(room);
+  $('meeting-dialog').close();selectRoom(room.id);openPrejoin(room.id);
+ }catch(error){toast(error.message);}finally{$('meeting-submit').disabled=false;}
+};
+function showInvite(){
+ const room=rooms.find(r=>r.id===current);if(!room?.code)return;
+ $('invite-code').value=room.code;
+ $('invite-link').value=previewMode?'Prévia local · use o aplicativo publicado para convites':new URL('/?meeting='+room.code,location.origin).href;
+ $('copy-link').disabled=previewMode;$('invite-dialog').showModal();
+}
+$('copy-invite').onclick=showInvite;$('close-invite').onclick=()=>$('invite-dialog').close();
+$('copy-link').onclick=async()=>{try{await navigator.clipboard.writeText($('invite-link').value);toast('Convite copiado! Envie para sua equipe.');}catch{$('invite-link').select();toast('Selecione e copie o link acima.');}};
+function openPrejoin(roomId){
+ if(previewMode){toast('A prévia mostra o design. As chamadas funcionam no WorkCall com servidor.');return;}
+ if(callRoom){toast('Encerre a chamada atual antes de entrar em outra.');return;}
+ prejoinRoom=roomId;$('prejoin-title').textContent=roomName(rooms.find(r=>r.id===roomId));
+ $('prejoin-error').textContent='';$('prejoin-dialog').showModal();
+}
+$('call').onclick=()=>openPrejoin(current);$('cancel-prejoin').onclick=()=>$('prejoin-dialog').close();
+$('prejoin-form').onsubmit=async event=>{
+ event.preventDefault();$('join-confirm').disabled=true;
+ try{await joinCall(prejoinRoom,$('prejoin-mic').checked,$('prejoin-camera').checked);$('prejoin-dialog').close();}
+ catch(error){$('prejoin-error').textContent=error.message;}
+ finally{$('join-confirm').disabled=false;}
+};
+function mediaError(error){
+ if(error.name==='NotAllowedError')return 'Permita o acesso à câmera e ao microfone no navegador, ou desmarque as opções para entrar sem eles.';
+ if(error.name==='NotFoundError')return 'Câmera ou microfone não encontrado. Desmarque o dispositivo indisponível para continuar.';
+ return error.message||'Não foi possível acessar seus dispositivos.';
+}
+async function joinCall(roomId,audio,video){
+ if(!navigator.mediaDevices?.getUserMedia)throw new Error('Para usar câmera e microfone, abra o WorkCall por HTTPS.');
+ try{
+  stream=audio||video?await navigator.mediaDevices.getUserMedia({audio,video}):new MediaStream();
+  callRoom=roomId;
+  const data=await api('join',{room:roomId,mic:audio,camera:video});shares.set(roomId,data.owner);
+  $('call-panel').hidden=false;document.body.classList.add('in-call');
+  $('call-label').textContent=roomName(rooms.find(r=>r.id===roomId));$('call').disabled=true;
+  tile(id,name+' (você)',stream,true);updateControls();renderSharing();syncPeers();
+ }catch(error){
+  const joined=callRoom;callRoom=null;stream?.getTracks().forEach(t=>t.stop());stream=null;
+  if(joined)api('leave',{room:joined}).catch(()=>{});
+  throw new Error(mediaError(error));
+ }
+}
+function tile(peerId,label,media,muted=false){
+ let element=document.getElementById('video-'+peerId);
+ if(!element){
+  element=document.createElement('div');element.id='video-'+peerId;element.className='video-tile';
+  const video=document.createElement('video');video.autoplay=true;video.playsInline=true;video.muted=muted;
+  const placeholder=avatar(label);placeholder.classList.add('video-avatar');
+  const caption=document.createElement('span');caption.textContent=label;
+  element.append(video,placeholder,caption);$('videos').append(element);
+ }
+ element.querySelector('video').srcObject=media;element.querySelector('video').play().catch(()=>{});
+ const remotePeer=peers.get(peerId);
+ const enabled=peerId===id?stream?.getVideoTracks().some(t=>t.enabled):remotePeer?.pc.connectionState==='connected'&&users.find(u=>u.id===peerId)?.camera;
+ const caption=element.querySelector('span');
+ caption.textContent=label+(peerId!==id&&remotePeer?.pc.connectionState!=='connected'?' · Conectando':'');
+ element.classList.toggle('camera-off',!enabled);
+}
+function removePeer(peerId){const peer=peers.get(peerId);clearTimeout(peer?.timeout);peer?.pc.close();peers.delete(peerId);pending.delete(peerId);document.getElementById('video-'+peerId)?.remove();renderSharing();}
+function makePeer(peerId,offerer=false){
+ if(peers.has(peerId))return peers.get(peerId);
+ const pc=new RTCPeerConnection({iceServers});
+ const audio=offerer?pc.addTransceiver('audio',{direction:'sendrecv'}):null;
+ const camera=offerer?pc.addTransceiver('video',{direction:'sendrecv'}):null;
+ const screen=offerer?pc.addTransceiver('video',{direction:'sendrecv'}):null;
+ const peer={pc,audio,camera,screen,remote:new MediaStream(),presentation:new MediaStream()};peers.set(peerId,peer);
+
+ tile(peerId,users.find(u=>u.id===peerId)?.name||'Participant',peer.remote);
+ pc.onicecandidate=event=>{if(event.candidate&&callRoom)api('signal',{room:callRoom,to:peerId,signal:{candidate:event.candidate}}).catch(()=>{});};
+ pc.ontrack=event=>{
+  if(pc.getTransceivers().indexOf(event.transceiver)===2)peer.presentation.addTrack(event.track);
+  else peer.remote.addTrack(event.track);
+  tile(peerId,users.find(u=>u.id===peerId)?.name||'Participante',peer.remote);renderSharing();
+ };
+ peer.timeout=setTimeout(()=>{if(pc.connectionState!=='connected'&&callRoom)toast('A mídia ainda não conectou. Verifique a rede e a configuração TURN da hospedagem.');},20000);
+ pc.onconnectionstatechange=()=>{
+  if(pc.connectionState==='connected')clearTimeout(peer.timeout);
+  tile(peerId,users.find(u=>u.id===peerId)?.name||'Participante',peer.remote);
+  if(pc.connectionState==='failed')toast('Não foi possível conectar a mídia. Redes restritivas podem precisar de um servidor TURN.');
+ };
+ return peer;
+}
+async function setPeerTracks(peer){
+ await Promise.all([
+  peer.audio.sender.replaceTrack(stream?.getAudioTracks()[0]||null),
+  peer.camera.sender.replaceTrack(stream?.getVideoTracks()[0]||null),
+  peer.screen.sender.replaceTrack(screenStream?.getVideoTracks()[0]||null),
+ ]);
+}
+async function syncPeers(){
+ if(!callRoom||!stream)return;
+ const others=users.filter(u=>u.call===callRoom&&u.id!==id);$('call-count').textContent=(others.length+1)+' participante(s)';
+ for(const peerId of [...peers.keys()])if(!others.some(u=>u.id===peerId))removePeer(peerId);
+ for(const [peerId,peer] of peers)tile(peerId,users.find(u=>u.id===peerId)?.name||'Participante',peer.remote);
+ for(const user of others){
+  if(peers.has(user.id)||id>user.id)continue;
+  const peer=makePeer(user.id,true);
+  try{await setPeerTracks(peer);await peer.pc.setLocalDescription(await peer.pc.createOffer());await api('signal',{room:callRoom,to:user.id,signal:{description:peer.pc.localDescription}});}
+  catch{removePeer(user.id);toast('Falha ao iniciar conexão com um participante.');}
+ }
+}
+async function handleSignal({from,signal}){
+ if(!callRoom||!stream||!users.some(u=>u.id===from&&u.call===callRoom))return;
+ const peer=makePeer(from),{pc}=peer;
+ if(signal.description){
+  await pc.setRemoteDescription(signal.description);
+  for(const candidate of pending.get(from)||[])await pc.addIceCandidate(candidate);pending.delete(from);
+  if(signal.description.type==='offer'){
+   [peer.audio,peer.camera,peer.screen]=pc.getTransceivers();
+   for(const transceiver of pc.getTransceivers())transceiver.direction='sendrecv';
+   await setPeerTracks(peer);
+   await pc.setLocalDescription(await pc.createAnswer());
+   await api('signal',{room:callRoom,to:from,signal:{description:pc.localDescription}});
+  }
+ }else if(signal.candidate){
+  if(pc.remoteDescription)await pc.addIceCandidate(signal.candidate);
+  else{if(!pending.has(from))pending.set(from,[]);pending.get(from).push(signal.candidate);}
+ }
+}
+function updateControls(){
+ const audio=stream?.getAudioTracks()[0],video=stream?.getVideoTracks()[0];
+ $('mic').textContent=audio?.enabled?'Microfone ligado':'Ligar microfone';
+ $('camera').textContent=video?.enabled?'Câmera ligada':'Ligar câmera';
+ $('mic').setAttribute('aria-pressed',String(!!audio?.enabled));$('camera').setAttribute('aria-pressed',String(!!video?.enabled));
+ if(stream)tile(id,name+' (você)',stream,true);
+}
+async function publishMedia(){
+ await api('media',{room:callRoom,mic:!!stream?.getAudioTracks()[0]?.enabled,camera:!!stream?.getVideoTracks()[0]?.enabled});
+ updateControls();
+}
+async function toggleMedia(kind){
+ if(!callRoom||!stream)return;
+ const button=$(kind==='audio'?'mic':'camera');button.disabled=true;
+ try{
+  let track=stream.getTracks().find(t=>t.kind===kind);
+  if(track&&track.readyState==='live')track.enabled=!track.enabled;
+  else{
+   const acquired=await navigator.mediaDevices.getUserMedia({audio:kind==='audio',video:kind==='video'});track=acquired.getTracks()[0];stream.addTrack(track);
+   await Promise.all([...peers.values()].map(p=>(kind==='audio'?p.audio:p.camera)?.sender.replaceTrack(track)));
+  }
+  await publishMedia();
+ }catch(error){toast(mediaError(error));}finally{button.disabled=false;}
+}
+$('mic').onclick=()=>toggleMedia('audio');$('camera').onclick=()=>toggleMedia('video');
+function renderSharing(){
+ const owner=shares.get(callRoom);const active=!!callRoom&&!!owner;
+ $('presentation').hidden=!active;
+ const video=$('presentation-video');
+ const media=owner===id?screenStream:peers.get(owner)?.presentation;
+ if(video.srcObject!==media){video.srcObject=media||null;video.play().catch(()=>{});}
+ $('presentation-name').textContent=owner===id?'Você está apresentando':(users.find(u=>u.id===owner)?.name||'Participante')+' está apresentando';
+ $('sharing-status').textContent=active?(owner===id?'Você está compartilhando. Sua câmera continua disponível.':'Aguarde a apresentação terminar para compartilhar sua tela.'):'Uma pessoa por vez pode apresentar. As câmeras continuam ligadas.';
+ $('screen').textContent=owner===id?'Parar compartilhamento':'Compartilhar tela';
+ $('screen').disabled=screenBusy||!!(owner&&owner!==id);
+}
+async function stopScreen(notify=true){
+ const active=screenStream;screenStream=null;
+ active?.getTracks().forEach(t=>{t.onended=null;t.stop();});
+ await Promise.all([...peers.values()].map(p=>p.screen?.sender.replaceTrack(null)));
+ if(shares.get(callRoom)===id)shares.set(callRoom,null);
+ if(notify&&callRoom)try{await api('share-stop',{room:callRoom});}catch(error){toast(error.message);}
+ renderSharing();
+}
+$('screen').onclick=async()=>{
+ if(!callRoom||screenBusy)return;
+ if(screenStream){await stopScreen();return;}
+ if(!navigator.mediaDevices.getDisplayMedia){toast('Este navegador não permite compartilhar a tela. Use um navegador compatível no computador.');return;}
+ const room=callRoom;screenBusy=true;renderSharing();let captured,claimed=false;
+ try{
+  captured=await navigator.mediaDevices.getDisplayMedia({video:true,audio:false});
+  if(room!==callRoom){captured.getTracks().forEach(t=>t.stop());return;}
+  await api('share-start',{room});claimed=true;
+  if(captured.getVideoTracks()[0].readyState!=='live'){await api('share-stop',{room});claimed=false;throw new Error('O compartilhamento foi interrompido. Tente novamente.');}
+  screenStream=captured;shares.set(room,id);
+  screenStream.getVideoTracks()[0].onended=()=>stopScreen();
+  await Promise.all([...peers.values()].map(p=>p.screen?.sender.replaceTrack(screenStream.getVideoTracks()[0])));
+ }catch(error){
+  captured?.getTracks().forEach(t=>t.stop());screenStream=null;
+  if(claimed)await stopScreen();
+  if(error.name!=='NotAllowedError')toast(error.message||'Não foi possível compartilhar a tela.');
+ }finally{screenBusy=false;renderSharing();}
+};
+async function leaveCall(notify=true){
+ const old=callRoom;callRoom=null;
+ for(const peerId of [...peers.keys()])removePeer(peerId);
+ stream?.getTracks().forEach(t=>t.stop());screenStream?.getTracks().forEach(t=>{t.onended=null;t.stop();});
+ stream=null;screenStream=null;screenBusy=false;$('videos').replaceChildren();
+ $('presentation-video').srcObject=null;$('presentation').hidden=true;
+ $('call-panel').hidden=true;document.body.classList.remove('in-call');$('call').disabled=false;updateControls();
+ if(notify&&old)try{await api('leave',{room:old});}catch(error){toast(error.message);}
+}
+$('hangup').onclick=()=>leaveCall();
+$('sidebar-toggle').onclick=()=>{const open=document.body.classList.toggle('sidebar-open');$('sidebar-toggle').setAttribute('aria-expanded',String(open));};
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){document.body.classList.remove('sidebar-open');$('sidebar-toggle').setAttribute('aria-expanded','false');}});
+</script></body></html>
